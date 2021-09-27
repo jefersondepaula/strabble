@@ -1,0 +1,140 @@
+body,*{
+    padding: 0;
+    margin: 0;    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: #888;
+}
+
+h1{
+    color: #fff;
+    font-weight: 600;
+    font-size: 3em;
+}
+h2{
+    font-weight: 400;
+}
+
+header {
+    grid-area: header; 
+    background-image: url(../img/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 390px;
+}
+main{
+    grid-area: main;
+}
+input[type="search"]{
+    padding: 5px 20px;
+    border-radius: 15px;
+    outline: 0;
+    border:3px solid #ffebca;
+}
+.button{
+    background-color: #444;
+    color: #ffebca;
+    border: 1px solid #444;
+    padding: 10px 35px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+.button:hover{
+    border: 1px solid #ffebca;
+}
+.grid-container{    
+    display: grid;
+    grid-template: 
+        'header header'
+        'main main'
+    ;
+}
+.container{
+    max-width: 980px;
+    margin: auto;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-area{    
+    width: 100%;
+    height: 100%; 
+    background-color: #444444d6;    
+}
+.title-area h1{
+    color: #ffebca;
+    text-transform: uppercase;
+}
+
+/*form section area*/
+section.form-area{
+    height: 100%;
+}
+.form-input-area{
+    flex-direction: column;
+}
+.form-input-area input[type="search"]{
+    margin: 20px 0;
+}
+.form-title{
+    background-color: #ffebca;
+    height: 100px;
+    line-height: 100px;
+}
+.form-search{
+    display: flex;
+    height: 300px;
+}
+.form-search>div{
+    flex: 1;
+}
+.form-result-word, .form-result-total{
+    text-transform: uppercase;
+}
+.form-result-info{
+    flex-direction: column;
+}
+.form-result-total{
+    margin-top: 15px;
+}
+
+/*result area*/
+.results{
+    background-color: #444;
+    padding: 40px 0px;
+}
+.result-count h2{
+    color: #ffebca;
+}
+.result-list ul li{
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+.result-list ul li span{
+    color:#000;
+    margin-left: 10px;
+    border: 1px solid #ff0000;
+    padding: 5px;
+}
+.result-list ul li:nth-child(odd){
+    background-color: #ffebca;
+}
+.result-list ul li:nth-child(even){
+    background-color: #eaeaea;
+}
+
+/*media queries*/
+
+@media screen and (max-width:426px) {
+    .form-search{
+        flex-direction: column;
+    }
+    .title-area h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+}
